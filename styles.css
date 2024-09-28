@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.container {
+    display: inline-block;
+    border: 2px solid #ccc;
+    background: #fff;
+    max-width: 100%; /* Ensure container fits within the screen */
+}
+
+canvas {
+    border: 1px solid #000;
+    width: 100%; /* Make canvas responsive */
+    height: 100%; /* Maintain aspect ratio */
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    margin: 5px 10px;
+}
+
+#brushSize {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#clearCanvas {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#clearCanvas:hover {
+    background-color: #e60000;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .controls label,
+    .controls input,
+    .controls button {
+        margin: 5px;
+        flex: 1 1 100%; /* Make controls stack on small screens */
+    }
+
+    canvas {
+        max-width: 100%; /* Ensure canvas does not overflow */
+        height: 300px; /* Set a smaller height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    canvas {
+        height: 250px; /* Further reduce height for very small screens */
+    }
+}
